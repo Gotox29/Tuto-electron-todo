@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'"> -->
+    <title>Add Todo</title>
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
+
+    <style>
+        body {
+            font: caption;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="text-center">Add Todo</h1>
+    <form id="todoForm">
+        <div class="form-group">
+            <label for="add-input" class="form-label">Todo</label>
+            <Input class="form-input" type="text" name="add-input" placeholder="Je dois..." />
+        </div>
+        <button type="submit" class="btn">Add Todo</button>
+    </form>
+    <script src="./add.js"></script>
+</body>
+</html>
