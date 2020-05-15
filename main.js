@@ -9,8 +9,6 @@ const DataStore = require('./dataStore')
 
 const todosData = new DataStore({ name: 'Todos Main'})
 
-
-
 function main() { 
   let mainWindow = new Window({
     file: path.join('renderer', 'index.html')
@@ -22,6 +20,9 @@ function main() {
     mainWindow.webContents.send('todos', todosData.todos)
   })
 
+  /**
+   * IpcMain permet la communication entre la fenêtre et le back-end
+   */
   ipcMain.on('add-todo-window', () => {
     if(!addTodoWin) {
       addTodoWin = new Window({
